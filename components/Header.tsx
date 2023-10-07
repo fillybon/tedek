@@ -2,13 +2,11 @@
 
 import Button from "./Button";
 import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
 
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "next/navigation";
-import { User } from "@supabase/auth-helpers-react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useEffect, useState } from "react";
-import { useUser } from "@/hooks/useUser";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -35,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   return (
     <div
       className={twMerge(
-        "h-fit bg-gradient-to-bl from-platinum p-6 flex flex-col items-end",
+        "h-fit bg-gradient-to-bl from-platinum px-6 py-4 flex flex-col items-end",
         className
       )}
     >

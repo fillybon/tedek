@@ -1,7 +1,7 @@
 export interface Post {
   id: string;
   project_title: string;
-  project_desription: string;
+  project_description: string;
   contributor_expertise: string;
   attachments: string[];
   activity: number;

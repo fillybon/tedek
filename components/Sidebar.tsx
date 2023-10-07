@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
       <main className="h-full flex-1 oveflow-y-auto py-2 ml-2 text-white">
         {children}
       </main>
-      <div className="hidden md:flex flex-col gap-y-2 bg-rich-black h-full p-2 hover:w-[18rem] w-[4rem] transition-all duration-500">
+      <div className="hidden md:flex flex-col gap-y-2 bg-rich-black h-full p-2 hover:w-[16rem] w-[4rem] transition-all duration-500">
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
             {routes.slice(0, -1).map((route) => (

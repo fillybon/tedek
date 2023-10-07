@@ -16,10 +16,7 @@ const PageContent: React.FC<PageContentProps> = ({ posts }) => {
   }
 
   return (
-    <div
-      className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3
-        lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-8 gap-4 mt-4"
-    >
+    <div className="w-full h-full mt-4 px-2 flex gap-y-3">
       {posts.map((post) => (
         <PostItem key={post.id} data={post} />
       ))}

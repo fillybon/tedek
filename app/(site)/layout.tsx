@@ -1,6 +1,7 @@
 import Sidebar from "@/components/Sidebar";
 import ModalProvider from "@/providers/ModalProvider";
 import SupabaseProvider from "@/providers/SupabaseProvider";
+import UserProvider from "@/providers/UserProvider";
 
 export default function SiteLayout({
   children,
@@ -10,8 +11,10 @@ export default function SiteLayout({
   return (
     <>
       <SupabaseProvider>
-        <ModalProvider />
-        <Sidebar>{children}</Sidebar>
+        <UserProvider>
+          <ModalProvider />
+          <Sidebar>{children}</Sidebar>
+        </UserProvider>
       </SupabaseProvider>
     </>
   );

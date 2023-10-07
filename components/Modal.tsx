@@ -26,10 +26,10 @@ const Modal: React.FC<ModalProps> = ({
                             md:max-w-[450px] translate-x-[-50%] translate-y-[-50%] 
                             rounded-md bg-neutral-800 p-[25px] focus:outline-none"
         >
-          <Dialog.Title className="text-xl text-center font-bold mb-4">
+          <Dialog.Title className="text-xl text-center font-bold mb-2 text-white">
             {title}
           </Dialog.Title>
-          <Dialog.Description className="mb-5 text-sm leading-normal text-center">
+          <Dialog.Description className="mb-5 text-sm leading-normal text-center text-white">
             {description}
           </Dialog.Description>
           <div>{children}</div>

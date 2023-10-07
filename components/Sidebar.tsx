@@ -42,6 +42,9 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
 
   return (
     <div className="flex h-full">
+      <main className="h-full flex-1 oveflow-y-auto py-2 ml-2 text-white">
+        {children}
+      </main>
       <div className="hidden md:flex flex-col gap-y-2 bg-rich-black h-full w-[18rem] p-2">
         <Box>
           <div className="flex flex-col gap-y-4 px-5 py-4">
@@ -59,9 +62,6 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           <div className="h-full"></div>
         </Box>
       </div>
-      <main className="h-full flex-1 oveflow-y-auto py-2 mr-2 text-white">
-        {children}
-      </main>
     </div>
   );
 };

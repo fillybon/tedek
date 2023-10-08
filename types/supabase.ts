@@ -13,56 +13,59 @@ export interface Database {
         Row: {
           activity: number | null
           attachments: string[] | null
-          contributer_expertise: string | null
+          contributor_expertise: string | null
           created_at: string
           id: number
           project_description: string | null
           project_title: string
-          tags: number | null
+          tags: string[] | null
         }
         Insert: {
           activity?: number | null
           attachments?: string[] | null
-          contributer_expertise?: string | null
+          contributor_expertise?: string | null
           created_at?: string
           id?: number
           project_description?: string | null
           project_title: string
-          tags?: number | null
+          tags?: string[] | null
         }
         Update: {
           activity?: number | null
           attachments?: string[] | null
-          contributer_expertise?: string | null
+          contributor_expertise?: string | null
           created_at?: string
           id?: number
           project_description?: string | null
           project_title?: string
-          tags?: number | null
+          tags?: string[] | null
+        }
+        Relationships: []
+      }
+      users: {
+        Row: {
+          avatar_url: string | null
+          full_name: string | null
+          id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          full_name?: string | null
+          id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          full_name?: string | null
+          id?: string
         }
         Relationships: [
           {
-            foreignKeyName: "posts_tags_fkey"
-            columns: ["tags"]
-            referencedRelation: "tags"
+            foreignKeyName: "users_id_fkey"
+            columns: ["id"]
+            referencedRelation: "users"
             referencedColumns: ["id"]
           }
         ]
-      }
-      tags: {
-        Row: {
-          id: number
-          name: string | null
-        }
-        Insert: {
-          id?: number
-          name?: string | null
-        }
-        Update: {
-          id?: number
-          name?: string | null
-        }
-        Relationships: []
       }
     }
     Views: {

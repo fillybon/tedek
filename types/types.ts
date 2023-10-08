@@ -1,16 +1,12 @@
 export interface Post {
-  id: string;
-  project_title: string;
-  project_description: string;
-  contributor_expertise: string;
-  attachments: string[];
-  activity: number;
-  tags: Tag[];
-}
-
-export interface Tag {
   id: number;
-  name: string;
+  project_title: string;
+  project_description: string | null;
+  contributor_expertise: string | null;
+  attachments: string[] | null;
+  activity: number;
+  tags: string[] | null;
+  created_at: string;
 }
 
 export interface UserDetails {

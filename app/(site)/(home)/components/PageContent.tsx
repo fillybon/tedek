@@ -11,6 +11,8 @@ interface PageContentProps {
 const PageContent: React.FC<PageContentProps> = ({ posts }) => {
   const authModal = useAuthModal();
 
+  console.log(posts[0].tags);
+
   if (posts.length === 0) {
     return <div className="mt-4 text-neutral-400">No posts available.</div>;
   }

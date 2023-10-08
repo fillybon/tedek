@@ -7,6 +7,7 @@ import { useUser } from "@/hooks/useUser";
 import { twMerge } from "tailwind-merge";
 import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import Image from "next/image";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -33,10 +34,13 @@ const Header: React.FC<HeaderProps> = ({ children, className }) => {
   return (
     <div
       className={twMerge(
-        "h-fit bg-gradient-to-bl from-platinum px-6 py-4 flex flex-col items-end",
+        "h-fit bg-gradient-to-bl from-platinum px-6 py-4 flex flex-row justify-between",
         className
       )}
     >
+      <div className="relative w-16 h-16">
+        <Image src={"/tedek.png"} alt="Logo" fill className="scale-150" />
+      </div>
       <div className="flex gap-x-4 items-center">
         {user ? (
           <div>

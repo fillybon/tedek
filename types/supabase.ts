@@ -11,7 +11,7 @@ export interface Database {
     Tables: {
       posts: {
         Row: {
-          activity: number | null
+          activity: number
           attachments: string[] | null
           contributor_expertise: string | null
           created_at: string
@@ -21,7 +21,7 @@ export interface Database {
           tags: string[] | null
         }
         Insert: {
-          activity?: number | null
+          activity?: number
           attachments?: string[] | null
           contributor_expertise?: string | null
           created_at?: string
@@ -31,7 +31,7 @@ export interface Database {
           tags?: string[] | null
         }
         Update: {
-          activity?: number | null
+          activity?: number
           attachments?: string[] | null
           contributor_expertise?: string | null
           created_at?: string

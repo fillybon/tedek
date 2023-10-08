@@ -39,7 +39,7 @@ const TagPage: React.FC<TagPageProps> = ({ params }) => {
     }
 
     getTagPosts();
-  }, []);
+  }, [tag, supabase]);
 
   return (
     <div>

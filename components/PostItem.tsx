@@ -31,6 +31,7 @@ const PostItem: React.FC<PostItemProps> = ({ data }) => {
         <div className="text-[.7rem] text-neutral-200 flex gap-x-2">
           {data.tags?.map((tag) => (
             <div
+              key={tag}
               className="p-2 bg-neutral-500 rounded-full hover:opacity-80"
               onClick={() => router.push("/tags/" + tag.toLowerCase())}
             >

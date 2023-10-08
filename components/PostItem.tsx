@@ -3,7 +3,6 @@
 import { Post } from "@/types/types";
 
 import { useRouter } from "next/navigation";
-import { MouseEventHandler } from "react";
 import {
   TbAntennaBars2,
   TbAntennaBars3,
@@ -23,7 +22,7 @@ const PostItem: React.FC<PostItemProps> = ({ data }) => {
     data.contributor_expertise?.slice(1)!;
 
   return (
-    <div className="w-7/12 h-min flex flex-col group bg-white/10 hover:bg-steel-blue/30 rounded-md p-4 mx-auto mt-16 cursor-pointer">
+    <div className="w-7/12 h-min flex flex-col group bg-white/10 hover:bg-steel-blue/30 rounded-md p-4 mx-auto mt-4 cursor-pointer">
       <p className="w-fit text-[1.2rem] mb-6 font-bold group-hover:text-burnt-sienna hover:underline underline-offset-2">
         {data.project_title}
       </p>

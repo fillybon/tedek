@@ -11,7 +11,9 @@ export default async function Home() {
     <div className="bg-neutral-600 rounded-lg h-full w-full overflow-hidden overfow-y-auto drop-shadow-lg">
       {/* @ts-ignore -> Ignore error in development */}
       <Header></Header>
-      <PageContent posts={posts} />
+      <div className="h-full w-full overflow-scroll pt-20">
+        <PageContent posts={posts} />
+      </div>
     </div>
   );
 }

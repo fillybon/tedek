@@ -63,7 +63,7 @@ const Add = () => {
   return (
     <div className="bg-neutral-600 rounded-lg h-full w-full overflow-hidden overfow-y-auto drop-shadow-lg">
       <Header />
-      <div className="w-full h-full">
+      <div className="w-2/4 h-full m-auto mt-20">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col gap-y-4"

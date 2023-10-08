@@ -39,7 +39,7 @@ const AuthModal = () => {
       isOpen={isOpen}
       onChange={onChange}
     >
-      <Auth
+      {/*       <Auth
         supabaseClient={supabase}
         providers={[]}
         magicLink
@@ -50,7 +50,10 @@ const AuthModal = () => {
             default: { colors: { brand: "#404040", brandAccent: "#22c55e" } },
           },
         }}
-      />
+      /> */}
+      <div className="text-2xl text-white">
+        <p>Notice: Function disabled due to feedback.</p>
+      </div>
     </Modal>
   );
 };

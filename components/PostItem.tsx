@@ -34,7 +34,7 @@ const PostItem: React.FC<PostItemProps> = ({ data }) => {
               className="p-2 bg-neutral-500 rounded-full hover:opacity-80"
               onClick={() => router.push("/tags/" + tag.toLowerCase())}
             >
-              <p>#{tag}</p>
+              <p key={tag}>#{tag}</p>
             </div>
           ))}
         </div>
